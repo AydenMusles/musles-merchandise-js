@@ -7,18 +7,13 @@ module.exports = {
     siteName: 'My Shop',
   },
   plugins: [
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-source-datocms`,
-      options: { apiToken: process.env.DATO_API_TOKEN },
+  {
+    resolve: `gatsby-source-shopify`,
+    options: {
+      // The domain name of your Shopify shop.
+      shopName: `musles-enterprise.myshopify.com`,
+      // The storefront access token
+      accessToken: `7d380b6c2736f57dde861be1f1bf4517`,
     },
-    {
-      resolve: 'gatsby-plugin-snipcart',
-      options: {
-        apiKey: 'OWE3MmZmMjQtNTk3Yi00OThhLWEwMmUtZDY4ZWM4NzIwYzZiNjM2NjM0Mzc1NzE0MTUwNzI1',
-        autopop: true
-      }
-    },
-  ],
-}
+  },
+]
